@@ -1,0 +1,224 @@
+/* General styles */
+:root {
+    --primary-color: #6cc3cb;
+    --primary-color-dark: #75b6d0;
+    --primary-color-light: #e9f7f7;
+    --secondary-color: #f4bb40;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color-light);
+    color: var(--text-dark);
+}
+
+/* Container for sections */
+.section__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Heading styles */
+h2, h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h2 span, h3 span {
+    color: var(--secondary-color);
+}
+
+/* Navigation styles */
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.nav__logo span {
+    color: var(--primary-color);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav__links a:hover {
+    color: var(--primary-color);
+}
+
+/* Button styles */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* About Us section */
+.about__section {
+    padding: 6rem 0;
+    background-color: var(--primary-color-light);
+    text-align: center;
+}
+
+.about__content {
+    margin-bottom: 2.5rem;
+}
+
+.about__content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about__content h2 span {
+    color: var(--primary-color);
+}
+
+.about__content p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* About Us Features & Why Choose */
+.about__features, .about__why-choose {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__features ul, .about__why-choose ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about__features li, .about__why-choose li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__features li::before, .about__why-choose li::before {
+    content: "✔️";
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--primary-color-dark);
+}
+
+.footer__socials {
+    margin-top: 1rem;
+}
+
+.footer__socials a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer__socials a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .nav__links {
+        gap: 1.5rem;
+    }
+
+    .about__section {
+        padding: 4rem 0;
+    }
+
+    .about__content p {
+        font-size: 1.05rem;
+    }
+
+    .about__features, .about__why-choose {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav__links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__content h2 {
+        font-size: 2rem;
+    }
+
+    .about__content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__socials {
+        display: flex;
+        justify-content: center;
+    }
+}
