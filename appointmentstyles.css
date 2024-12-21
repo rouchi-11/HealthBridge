@@ -1,0 +1,185 @@
+/* General Button Styling */
+form button,
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(239, 141, 42);
+    background-color: #ff9800; /* Orange color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover,
+.btn:hover {
+    background-color: #e68900; /* Slightly darker orange on hover */
+}
+
+/* Input Box Styling */
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ff9800; /* Orange border for consistency */
+    border-radius: 6px;
+    width: calc(25% - 20px);
+    min-width: 150px;
+    background-color: #b4e2e1; /* Light orange background */
+    color: #333;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e68900; /* Darker orange on focus */
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+/* Logo Styling */
+.nav__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800; /* Orange color for logo */
+}
+
+.nav__logo span {
+    color: #e68900; /* Slightly darker orange for the span */
+}
+
+/* Status Dropdown Styling */
+.status-dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ff9800;
+    border-radius: 4px;
+    background-color: #5fd3d9;
+    color: #000000;
+    cursor: pointer;
+}
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #e7eff0;
+}
+
+/* Section Container */
+/* .section__container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #53b0bc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+}
+
+form input {
+    flex: 1;
+    min-width: 180px;
+}
+
+form button {
+    background-color: #67ccd5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #89dcdc;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead th {
+    background-color: #7fd2c9;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Status Dropdown Styling */
+.status-dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Delete Button */
+.delete-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.status-dropdown:focus {
+    border-color: #e68900;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #e68900;
+}
