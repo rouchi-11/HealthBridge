@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <div class="form-group">
+            <label for="userType">I am a:</label>
+            <select id="userType">
+                <option value="">-- Select --</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+            </select>
+        </div>
+
+        <!-- Doctor Form -->
+        <form id="doctorForm" class="hidden">
+            <div class="form-group">
+                <label for="doctorName">Doctor Name:</label>
+                <input type="text" id="doctorName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" placeholder="Enter your specialization">
+            </div>
+            <div class="form-group">
+                <label for="doctorPhone">Phone Number:</label>
+                <input type="tel" id="doctorPhone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="doctorEmail">Email:</label>
+                <input type="email" id="doctorEmail" placeholder="Enter your email">
+            </div>
+            <button type="button" onclick="submitDoctorForm()">Create Doctor Account</button>
+        </form>
+
+        <!-- Patient Form -->
+        <form id="patientForm" class="hidden">
+            <div class="form-group">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="patientPhone">Phone Number:</label>
+                <input type="tel" id="patientPhone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="patientEmail">Email:</label>
+                <input type="email" id="patientEmail" placeholder="Enter your email">
+            </div>
+            <button type="button" onclick="submitPatientForm()">Create Patient Account</button>
+        </form>
+    </div>
+
+    <script>
+        const userTypeSelect = document.getElementById('userType');
+        const doctorForm = document.getElementById('doctorForm');
+        const patientForm = document.getElementById('patientForm');
+
+        userTypeSelect.addEventListener('change', () => {
+            if (userTypeSelect.value === 'doctor') {
+                doctorForm.classList.remove('hidden');
+                patientForm.classList.add('hidden');
+            } else if (userTypeSelect.value === 'patient') {
+                patientForm.classList.remove('hidden');
+                doctorForm.classList.add('hidden');
+            } else {
+                doctorForm.classList.add('hidden');
+                patientForm.classList.add('hidden');
+            }
+        });
+
+        function submitDoctorForm() {
+            const name = document.getElementById('doctorName').value;
+            const specialization = document.getElementById('specialization').value;
+            const phone = document.getElementById('doctorPhone').value;
+            const email = document.getElementById('doctorEmail').value;
+
+            if (name && specialization && phone && email) {
+                alert('Doctor Account Created! Redirecting to home page...');
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+
+        function submitPatientForm() {
+            const name = document.getElementById('patientName').value;
+            const phone = document.getElementById('patientPhone').value;
+            const email = document.getElementById('patientEmail').value;
+
+            if (name && phone && email) {
+                alert('Patient Account Created! Redirecting to home page...');
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+    </script>
+</body>
+</html>
