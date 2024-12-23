@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>HealthBridge</title>
+</head>
+
+<body>
+  <header>
+    <nav class="section__container nav__container">
+      <div class="nav__logo">Health<span>Bridge</span></div>
+      <ul class="nav__links">
+        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="about.html">About Us</a></li>
+        <li class="link"><a href="#service">Services</a></li>
+        <li class="link"><a href="#pages">Records</a></li>
+        <li class="link"><a href="#blog">Contact Us</a></li>
+      </ul>
+      <button class="btn">Login/Register</button>
+    </nav>
+    <div class="section__container header__container" id="home">
+      <div class="header__content">
+        <h1>Providing an Exceptional Patient Experience</h1>
+        <p>
+          Welcome, where exceptional patient experiences are our priority. With compassionate care, state-of-the-art facilities, and a patient-centered approach, we're dedicated to your well-being. Trust us with your health and experience the difference.
+        </p>
+        <button class="btn">See Services</button>
+      </div>
+      <div class="header__form">
+        <form action="appointment.html" method="get">
+          <h4>Book Now</h4>
+          <button type="submit" class="btn form__btn">Book Appointment</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider below header content -->
+  <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('data:image/jpeg;base64,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');"></div>
+    <div class="hero-slide" style="background-image: url('https://toledocitypaper.com/wp-content/uploads/2020/12/health.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('https://static.vecteezy.com/system/resources/previews/001/871/171/non_2x/flat-illustration-of-health-check-for-patient-records-first-aid-services-for-public-facilities-design-for-healthcare-can-be-used-for-landing-page-website-web-mobile-apps-posters-flyers-free-vector.jpg');"></div>
+
+    <div class="slider-navigation">
+      <button id="prevBtn">&lt;</button>
+      <button id="nextBtn">&gt;</button>
+    </div>
+  </div>
+
+  <section class="section__container service__container" id="service">
+    <div class="service__header">
+      <div class="service__header__content">
+        <h2 class="section__header">Our Special Service</h2>
+        <p>Beyond simply providing medical care, our commitment lies in delivering unparalleled service tailored to your unique needs.</p>
+      </div>
+      <button class="service__btn">Ask A Service</button>
+    </div>
+    <div class="service__grid">
+      <div class="service__card">
+        <span><i class="ri-microscope-line"></i></span>
+        <h4>Appointment Booking</h4>
+        <p>Accurate diagnostics and swift results: Book appointments effortlessly and access top-notch laboratory testing at our facility.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="service__card">
+        <span><i class="ri-mental-health-line"></i></span>
+        <h4>Reports</h4>
+        <p>Stay proactive about your health with thorough assessments and expert evaluations. Access your health reports conveniently.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="service__card">
+        <span><i class="ri-hospital-line"></i></span>
+        <h4>Medicine Notification</h4>
+        <p>Never miss a dose! Stay on track with your medications through timely notifications for a healthier, stress-free routine.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Health<span></span></h3>
+        <p>We are honored to be a part of your healthcare journey and committed to delivering compassionate, personalized, and top-notch care every step of the way.</p>
+        <p>Trust us with your health, and let us work together to achieve the best possible outcomes for you and your loved ones.</p>
+      </div>
+      <div class="footer__col">
+        <h4>About Us</h4>
+        <p>Home</p>
+        <p>About Us</p>
+        <p>Work With Us</p>
+        <p>Our Blog</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <p>Search Terms</p>
+        <p>Advance Search</p>
+        <p>Privacy Policy</p>
+        <p>Suppliers</p>
+        <p>Our Stores</p>
+      </div>
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <p><i class="ri-map-pin-2-fill"></i> 123, London Bridge Street, London</p>
+        <p><i class="ri-mail-fill"></i> support@care.com</p>
+        <p><i class="ri-phone-fill"></i> (+012) 3456 789</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="footer__bar__content">
+        <p>Copyright © 2023 Web Design Mastery. All rights reserved.</p>
+        <div class="footer__socials">
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-heart-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 5000);
+  </script>
+</body>
+</html>
